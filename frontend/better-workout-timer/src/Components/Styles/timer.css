@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Sets the containers height and width */
+.base-timer {
+  position: relative;
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+/* Removes svg styling that would hide the time label */
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* The svg path that displays teh timer's progess */
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__label {
+  position: absolute;
+
+  /* size should match the parent container */
+  width: 300px;
+  height: 300px;
+
+  /* keep the label aligned to the top */
+  /* top: 0; */
+
+  /* Create a flexible box that centers content vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Fix the positioning just a little */
+  left: 47px; top: 30px;
+
+  /* sort of an arbitrary number; adjust to your liking */
+  font-size: 7rem;
+}
+
+.base-timer__path-remaining {
+  /* Just as thick as the original ring */
+  stroke-width: 7px;
+
+  /* Rounds the line endings to create a seameless circle */
+  stroke-linecap: round;
+
+  /* Makes sure the animation starts at the top of the circle */
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  /*Try to ease the animations some, so it isn't so choppy */
+  transition: 1s linear all;
+  fill-rule: nonzero;
+
+  /* Allows the ring to change color when the color value updates */
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining,.green {
+  stroke: rgb(46, 236, 46);
+}
+
+.base-timer__path-remaining.orange {
+  stroke: orange;
+}
+
+.base-timer__path-remaining.red {
+  stroke: red;
+}
+
+.base-timer__path-remaining.lavender {
+  stroke: rgb(178, 178, 228);
+}
+
+.base-timer__svg {
+  /* Flips the svg and makes the animation to move left-to-right */
+  transform: scaleX(-1);
+}
+
+.pause-button {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  justify-content: center;
+  /* align-items: center; */
+  align-content: center;
+  margin-top: 40px;
+  height: 60px;
+  width: 60px;
+}
+.pause {
+  align-self: center;
+  align-content: center;
+  margin-bottom: 0;
+  margin-left: 0.8px;
+  height: 40px;
+}
+.play-button {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  justify-content: center;
+  /* align-items: center; */
+  align-content: center;
+  margin-top: 40px;
+  height: 60px;
+  width: 60px;
+  display: none;
+}
+.play {
+  align-self: center;
+  align-content: center;
+  margin-left: 3px;
+  margin-bottom: 4px;
+  /* display: none; */
+}
+
+.quit-button {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+  width: 50px;
+  height: 50px;
+  /* border-radius: 30%; */
+  background-color: red;
+  border-color: red;
+  margin-top: 20px;
+}
+
+.quit-button:hover {
+  background-color: rgb(224, 32, 32);
+}
+
+
+.quit-button:focus {
+  background-color: red;
+}
+
+.quit {
+  align-self: center;
+  align-content: center;
+  margin-left: 0px;
+  margin-bottom: 4px;
+}
+.timer-info-top-item {
+  /* height: 1rem; */
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 2rem 0 2rem;
+  /* margin-right: 45px; */
+}
+.timer-info-item1 {
+  grid-area: 'rounds-remaining-title';
+  /* margin-left: 40px; */
+  color: #6fcee9;
+}
+
+.timer-info-item2 {
+  grid-area: 'current-exercise-title';
+  color: rgb(115, 221, 94);
+}
+.timer-info-item3 {
+  grid-area: 'next-up-title';
+  color: rgb(201, 160, 221);
+}
+.timer-info-bottom-item {
+  /* height: 20px; */
+  margin-top: 0;
+  font-size: smaller;
+  padding: 0 2rem 0 2rem;
+  font-weight: 500;
+}
+.timer-info-item4 {
+  grid-area: 'rounds-remaining';
+}
+.timer-info-item5 {
+  grid-area: 'current-exercise';
+}
+.timer-info-item6 {
+  grid-area:'next-up';
+}
+
+.timer-info-container {
+  display: grid;
+  grid-template-areas: 
+  'rounds-remaining-title current-exercise-title next-up-title'
+  'rounds-remaining current-exercise next-up';
+  justify-content: center;
+  text-align: center;
+}

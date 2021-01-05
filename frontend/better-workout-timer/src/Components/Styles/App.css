@@ -1,0 +1,254 @@
+body {
+  background-color: #616c7e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-bottom: 10px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+h1 {
+  text-shadow: 3px 2px 10px blanchedalmond, 5px 2px 10px #4f70b4;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  margin-left: -2rem;
+  text-align: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-nav-links {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.my-nav {
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #61dafb;
+  list-style: none;
+  display: inline-flex;
+  padding: 0 25px 0 25px;
+  background-color: #2b2e33;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.my-nav:hover {
+  color: aliceblue;
+}
+
+.NAV-my-nav {
+  background-color: #2b2e33;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 5vh;
+}
+
+button.home-button {
+  background-color: #4f70b4;
+  border: none;
+  color: #61dafb;
+  width: 300px;
+  height: 75px;
+  padding: 15px 32px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 30px;
+  position: relative;
+  /* margin-right: 30vw;
+  margin-left: 30vw; */
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(12, 11, 11, 0.2), 0 6px 20px 0 rgba(41, 58, 95, 0.664);
+}
+
+
+button.home-button:hover {
+  color: aliceblue;
+}
+@keyframes clicked {
+  from {top: 0px;}
+  to {top:10px;}
+}
+
+button.home-button:active {
+  animation-name: clicked;
+  animation-direction: ease;
+  animation-duration: 0.22s;
+}
+
+button.quick-start-btn {
+  background-color: rgb(90, 180, 79);
+  color: whitesmoke;
+}
+
+button.quick-start-btn:hover {
+  color:rgb(13, 13, 14);
+  background-color:  rgb(131, 197, 122);
+}
+
+button.saved-routines-btn {
+  background-color: rgb(180, 133, 79);
+  color: whitesmoke;
+}
+
+button.saved-routines-btn:hover {
+  color:rgb(13, 13, 14);
+  background-color:  rgb(199, 155, 104);
+}
+
+button.create-routines-btn {
+  background-color: rgb(93, 113, 224);
+  color: whitesmoke;
+}
+
+button.create-routines-btn:hover {
+  color: rgb(13, 13, 14);
+  background-color: rgb(140, 148, 197);
+}
+
+@media only screen and (max-width: 590px) {
+  .NAV-my-nav {
+    height: 7vh;
+  }
+}
+
+
+.go-home-button {
+  position: fixed;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 9px;
+}
+
+
+
+/* ************************************************** */
+/* ************************************************** */
+/* The following CSS code applies to CreateRoutine.js */
+/* ************************************************** */
+/* ************************************************** */
+
+#exerciseList{
+  margin-top: 15px;
+  margin-left: 350px;
+  margin-right: 350px;
+  /* background-color: lightskyblue; */
+  color: lightskyblue;  
+  border: 2px solid #61dafb;;
+}
+
+.exercises{
+  border-bottom: 1px solid white;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+#createRoutinesForm{
+  background-color: #17a2b8;
+  margin-left: 350px;
+  margin-right: 350px;
+  border: 3px solid black;
+}
+
+.createRoutineLabel{
+  color: Black;
+}
+
+.createRoutineInput{
+  color: white;
+  background-color: lightskyblue;
+  border-color: royalblue;
+  border-width: 3px;
+  margin-left: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+
+#addExerciseInput{
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+.createRoutineButton{
+  border-radius: 5px;
+  height: 25px;
+  width: 125px;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+#addExerciseButton{
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 50%;
+  display: inline-block;
+  /* padding: 20px; */
+  width: 15%;
+  height: 20%;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#addExerciseButton:hover {
+  background-color: mediumblue;
+}
+
+#cancelRoutineButton{
+  background-color: red;
+}
+
+#cancelRoutineButton:hover {
+  background-color: firebrick;
+}
+
+#saveRoutineButton{
+  background-color: rgb(90, 180, 79);
+}
+
+#saveRoutineButton:hover {
+  background-color: #3e8e41;
+}
